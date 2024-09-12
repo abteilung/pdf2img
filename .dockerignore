@@ -1,0 +1,57 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Uploaded and generated files
+uploads/
+*.pdf.img
+
+# Redis dump file
+dump.rdb
+
+# Temporary files
+*.tmp
+
+# Documentation
+README.md
+
+# Test files
+tests/
+
+# Configuration files that should not be in the image
+*.yml
+*.yaml
+!docker-compose.yml
+
+# Any local development files
+*.dev
