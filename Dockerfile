@@ -11,6 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+RUN ls -R /usr/src/app
+
 ENV PYTHONPATH=/usr/src/app
 ENV PYTHONUNBUFFERED=1
 
