@@ -11,9 +11,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN ls -R /usr/src/app
-
 ENV PYTHONPATH=/usr/src/app
 ENV PYTHONUNBUFFERED=1
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--log-level", "debug", "wsgi:app"]
+# Make sure the entrypoint script has the correct permissions
+RUN chmod +x entrypoint.sh
+
+# Use ENTRYPOINT instead of CMD
+ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
