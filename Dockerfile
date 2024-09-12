@@ -14,4 +14,4 @@ COPY . .
 ENV PYTHONPATH=/usr/src/app
 ENV PYTHONUNBUFFERED=1
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--log-level", "debug", "wsgi:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--log-level", "debug", "app.wsgi:app"]
