@@ -72,11 +72,12 @@ def convert_pdf_to_image():
 
     image_url = url_for('serve_image', filename=filename, _external=True)
     return jsonify({
-        'id': filename,f
+        'id': filename,  # Added comma here
         'original_filename': file.filename,
         'page': page,
         'url': image_url
     })
+
 
 @app.route('/image/<string:filename>')
 def serve_image(filename):
@@ -194,5 +195,4 @@ def responsive_image(filename):
     return html
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
-
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))

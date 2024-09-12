@@ -6,8 +6,8 @@ services:
         ports:
             - '5005:5000'
         volumes:
-            - ./app:/app
-            - ./uploads:/app/uploads
+            - ./app:/usr/src/app/app
+            - ./uploads:/usr/src/app/uploads
         depends_on:
             - redis
         environment:
